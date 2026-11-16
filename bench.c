@@ -3,13 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   bench.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ommorali <ommorali@42.fr>                  +#+  +:+       +#+        */
+/*   By: atahlawi <atahlawi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/02 11:07:10 by ommorali          #+#    #+#             */
-/*   Updated: 2026/11/02 11:07:12 by ommorali         ###   ########.fr       */
+/*   Updated: 2026/11/12 12:04:36 by atahlawi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "push_swap.h"
 
@@ -18,13 +17,13 @@ static char	*get_strategy_name(int method, double disord)
 	if (method == 0)
 		return ("Simple / O(n^2)");
 	if (method == 1)
-		return ("Medium / O(n\342\210\232n)");
+		return ("Medium / O(n√n)");
 	if (method == 2)
 		return ("Complex / O(n log n)");
 	if (disord < 0.2)
 		return ("Adaptive / O(n^2)");
 	if (disord < 0.5)
-		return ("Adaptive / O(n\342\210\232n)");
+		return ("Adaptive / O(n√n)");
 	return ("Adaptive / O(n log n)");
 }
 

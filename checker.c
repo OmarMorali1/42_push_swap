@@ -3,13 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   checker.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ommorali <ommorali@42.fr>                  +#+  +:+       +#+        */
+/*   By: atahlawi <atahlawi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/02 11:07:10 by ommorali          #+#    #+#             */
-/*   Updated: 2026/11/02 11:07:12 by ommorali         ###   ########.fr       */
+/*   Updated: 2026/11/12 12:04:30 by atahlawi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "push_swap.h"
 
@@ -52,6 +51,7 @@ static int	read_operations(t_stack **a, t_stack **b)
 		if (!execute_operation(a, b, line))
 		{
 			free(line);
+			line = get_next_line(-1);
 			write(2, "Error\n", 6);
 			return (1);
 		}

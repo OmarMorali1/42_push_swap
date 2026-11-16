@@ -3,13 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   chunk_sort.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ommorali <ommorali@42.fr>                  +#+  +:+       +#+        */
+/*   By: atahlawi <atahlawi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/02 11:07:10 by ommorali          #+#    #+#             */
-/*   Updated: 2026/11/02 11:07:12 by ommorali         ###   ########.fr       */
+/*   Updated: 2026/11/12 12:04:28 by atahlawi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "push_swap.h"
 
@@ -111,12 +110,24 @@ void	chunk_sort(t_stack **a, t_stack **b, t_bench *bench)
 	int	len;
 
 	len = stack_len(*a);
-	if (len <= 5)
+	if (is_sorted(*a))
+		return ;
+	if (len == 2)
 	{
-		selection_sort(a, b, bench);
+		sa(a, bench, 1);
 		return ;
 	}
 	index_stack(*a);
+	if (len <= 3)
+	{
+		sort_three(a, bench);
+		return ;
+	}
+	if (len <= 5)
+	{
+		small_chunk_sort(a, b, bench);
+		return ;
+	}
 	push_chunk(a, b, len, bench);
 	push_b_to_a(a, b, bench);
 }

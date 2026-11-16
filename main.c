@@ -3,13 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ommorali <ommorali@42.fr>                  +#+  +:+       +#+        */
+/*   By: atahlawi <atahlawi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/02 11:07:10 by ommorali          #+#    #+#             */
-/*   Updated: 2026/11/02 11:07:12 by ommorali         ###   ########.fr       */
+/*   Updated: 2026/11/12 12:04:08 by atahlawi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "push_swap.h"
 
@@ -63,7 +62,7 @@ int	main(int argc, char **argv)
 		return (print_error(a));
 	if (!is_sorted(a))
 		sort(&a, &b, method, &bench);
-	if (bench.active)
+	if ((&bench)->active)
 		print_bench(&bench, method);
 	free_all(&a, &b);
 	return (0);

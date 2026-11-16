@@ -3,13 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   parse_flags.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ommorali <ommorali@42.fr>                  +#+  +:+       +#+        */
+/*   By: atahlawi <atahlawi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/02 11:07:10 by ommorali          #+#    #+#             */
-/*   Updated: 2026/11/02 11:07:12 by ommorali         ###   ########.fr       */
+/*   Created: 2026/11/12 12:02:10 by atahlawi          #+#    #+#             */
+/*   Updated: 2026/11/12 12:04:52 by atahlawi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "push_swap.h"
 

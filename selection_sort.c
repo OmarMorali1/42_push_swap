@@ -3,13 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   selection_sort.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ommorali <ommorali@42.fr>                  +#+  +:+       +#+        */
+/*   By: atahlawi <atahlawi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/02 11:07:10 by ommorali          #+#    #+#             */
-/*   Updated: 2026/11/02 11:07:12 by ommorali         ###   ########.fr       */
+/*   Updated: 2026/11/12 12:03:55 by atahlawi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "push_swap.h"
 
@@ -54,15 +53,15 @@ static void	move_min_to_top(t_stack **a, int min_pos, t_bench *b)
 	}
 }
 
-void	small_sort(t_stack **a, t_stack **b, t_bench *bench)
+static void	small_sort(t_stack **a, t_stack **b, t_bench *bench)
 {
-	while (stack_len(*a) > 3)
+	while (stack_len(*a) > 2)
 	{
 		move_min_to_top(a, min_position(*a), bench);
 		pb(a, b, bench);
 	}
-	if (!is_sorted(*a))
-		sort_three(a, bench);
+	if ((*a)->value > (*a)->next->value)
+		sa(a, bench, 1);
 	while (*b)
 		pa(a, b, bench);
 }

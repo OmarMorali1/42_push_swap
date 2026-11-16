@@ -3,19 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   libft_function.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ommorali <ommorali@42.fr>                  +#+  +:+       +#+        */
+/*   By: atahlawi <atahlawi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/02 11:07:10 by ommorali          #+#    #+#             */
-/*   Updated: 2026/11/02 12:01:25 by ommorali         ###   ########.fr       */
+/*   Updated: 2026/11/12 12:04:10 by atahlawi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "push_swap.h"
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	unsigned char *p;
+	unsigned char	*p;
 
 	p = s;
 	while (n)
